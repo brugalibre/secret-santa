@@ -16,9 +16,9 @@ repositories {
 }
 
 dependencies {
-    implementation group: 'com.brugalibre', name: 'common-app-domain', version: '1.1.6-SNAPSHOT'
-    implementation group: 'com.brugalibre', name: 'common-app-util', version: '1.0.3-SNAPSHOT'
-    implementation group: 'com.brugalibre', name: 'common-app-notification', version: '1.0.2-SNAPSHOT'
+    implementation group: 'com.brugalibre', name: 'common-app-domain', version: '1.2.1-SNAPSHOT'
+    implementation group: 'com.brugalibre', name: 'common-app-util', version: '1.1.0-SNAPSHOT'
+    implementation group: 'com.brugalibre', name: 'common-app-notification', version: '1.0.3-SNAPSHOT'
 
     implementation group: 'com.h2database', name: 'h2', version: '2.1.214'
     implementation 'org.springframework.boot:spring-boot-starter:3.1.5'
@@ -30,7 +30,7 @@ dependencies {
     implementation group: 'org.mapstruct', name: 'mapstruct', version: '1.5.2.Final'
     annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.3.Final'
 
-    testImplementation group: 'com.brugalibre', name: 'common-app-domain', version: '1.1.6-SNAPSHOT'
+    testImplementation group: 'com.brugalibre', name: 'common-app-domain', version: '1.2.1-SNAPSHOT'
     testImplementation 'org.hibernate:hibernate-core:6.1.7.Final'
     testImplementation group: 'com.h2database', name: 'h2', version: '2.1.214'
     testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '3.1.5'
