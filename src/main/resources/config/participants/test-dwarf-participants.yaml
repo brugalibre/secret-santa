@@ -11,6 +11,11 @@ userYamlEntries:
      - USER
  - username: Peter
    password: 321
-   phoneNr: 0001234567
+   phoneNr: 0001234569
+   roles:
+     - USER
+ - username: Heinz
+   password: 3210
+   phoneNr: 0001234580
    roles:
      - USER
