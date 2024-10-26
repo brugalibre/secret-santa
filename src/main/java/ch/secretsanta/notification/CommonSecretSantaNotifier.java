@@ -16,13 +16,13 @@ import static ch.secretsanta.i18n.textresources.TextResources.DWARF_NOTIFICATION
 /**
  * The {@link CommonSecretSantaNotifier} sends an alert configured by a {@link AlertSendConfig} to one or more subscribers
  */
-public abstract class CommonSecretSantaNotifier extends BasicAlertSender implements RaffleObserver {
+public abstract class CommonSecretSantaNotifier implements RaffleObserver {
    private static final Logger LOG = LoggerFactory.getLogger(CommonSecretSantaNotifier.class);
-
+   private BasicAlertSender basicAlertSender;
    private final String notificationMsg;
 
    public CommonSecretSantaNotifier(AlertSendConfigProvider configProvider, String notificationMsg) {
-      super(configProvider);
+      this.basicAlertSender =  new BasicAlertSender(configProvider);
       this.notificationMsg = notificationMsg;
    }
 
@@ -32,7 +32,7 @@ public abstract class CommonSecretSantaNotifier extends BasicAlertSender impleme
       for (RaffleResultDwarfParticipant raffleResultDwarfParticipant : dwarfParticipants) {
          String msg = getMessage4Result(raffleResultDwarfParticipant.name(), raffleResultDwarfParticipant.toDwarfParticipantName());
          AlertSendInfos alertSendInfos = new AlertSendInfos(DWARF_NOTIFICATION_TITEL, msg, List.of(raffleResultDwarfParticipant.phoneNr()));
-         sendMessage(alertSendInfos);
+         basicAlertSender.sendMessage(alertSendInfos);
       }
    }
 
