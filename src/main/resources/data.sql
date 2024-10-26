@@ -7,6 +7,16 @@ CREATE TABLE IF NOT EXISTS users
     CONSTRAINT UNIQUE_USERNAME unique (username)
  );
 
+create table mobile_phone_entity
+(
+    contact_point_type varchar(255) check (contact_point_type in ('MOBILE_PHONE')),
+    id                 varchar(255) not null,
+    phone_nr           varchar(255),
+    user_id            varchar(255),
+    primary key (id),
+    constraint UKl3yjeh4800r600noqytwvsx35 unique (phone_nr)
+);
+
 CREATE TABLE IF NOT EXISTS contact_point_entity
 (
     dm_contact_point_type varchar(31)  not null,
