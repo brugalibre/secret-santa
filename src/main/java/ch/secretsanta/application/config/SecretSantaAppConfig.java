@@ -1,7 +1,7 @@
 package ch.secretsanta.application.config;
 
 import ch.secretsanta.domain.participant.repository.DwarfParticipantRepository;
-import ch.secretsanta.persistence.user.dao.DwarfParticipantDao;
+import ch.secretsanta.persistence.dwarf.dao.DwarfParticipantDao;
 import com.brugalibre.common.domain.app.config.CommonAppPersistenceConfig;
 import com.brugalibre.domain.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

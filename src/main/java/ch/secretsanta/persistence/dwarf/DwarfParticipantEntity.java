@@ -1,4 +1,4 @@
-package ch.secretsanta.persistence.user;
+package ch.secretsanta.persistence.dwarf;
 
 import com.brugalibre.common.domain.persistence.DomainEntity;
 import jakarta.persistence.Entity;

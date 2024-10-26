@@ -48,9 +48,9 @@ public class SecretSantaReminderSchedulerStarter {
     * Starts the secret-santa reminder scheduler which automatically triggers the {@link SecretSantaReminderService}
     */
    private void startScheduler() {
-      Duration initDelay = calcInitialDelay(secretSantaReminderDate.calculateCourseDefUpdateLocalDateTime());
+      Duration initDelay = calcInitialDelay(secretSantaReminderDate.calculateSecretSantaReminderDateTime());
       if (initDelay.isNegative()) {
-         LOG.warn("Date {} for secret-santa reminder is already in the past, not scheduling a reminder!", secretSantaReminderDate.calculateCourseDefUpdateLocalDateTime());
+         LOG.warn("Date {} for secret-santa reminder is already in the past, not scheduling a reminder!", secretSantaReminderDate.calculateSecretSantaReminderDateTime());
       } else {
          LOG.info("Wait {} until sending secret-santa reminder", initDelay);
          this.scheduledFuture = scheduledExecutorService.schedule(secretSantaReminderService::sendReminder,

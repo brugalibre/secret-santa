@@ -27,7 +27,7 @@ public class SecretSantaReminderDate {
       this.reminderTime = reminderTime;
    }
 
-   public LocalDateTime calculateCourseDefUpdateLocalDateTime() {
+   public LocalDateTime calculateSecretSantaReminderDateTime() {
       TemporalAccessor secretSantaDate = LocalDate.parse(secretSantaDateAsString)
               .minusDays(daysSendReminderEarlier);
       TemporalAccessor localTime = LocalTime.parse(reminderTime);

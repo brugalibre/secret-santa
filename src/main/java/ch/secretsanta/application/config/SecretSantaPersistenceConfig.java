@@ -1,6 +1,6 @@
 package ch.secretsanta.application.config;
 
-import ch.secretsanta.persistence.user.dao.DwarfParticipantDao;
+import ch.secretsanta.persistence.dwarf.dao.DwarfParticipantDao;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

@@ -1,6 +1,6 @@
-package ch.secretsanta.persistence.user.dao;
+package ch.secretsanta.persistence.dwarf.dao;
 
-import ch.secretsanta.persistence.user.DwarfParticipantEntity;
+import ch.secretsanta.persistence.dwarf.DwarfParticipantEntity;
 import org.springframework.data.repository.CrudRepository;
 
 public interface DwarfParticipantDao extends CrudRepository<DwarfParticipantEntity, String> {
