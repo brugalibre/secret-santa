@@ -1,0 +1,9 @@
+application:
+  secretSantaDate: '2024-11-01'
+  notification:
+    notificationConfigFile: "config/notification/test-secret-santanotification-config.yaml"
+    apiKey: "abc"
+    daysSendReminderEarlier: 5
+    reminderTime: '17:00'
+  user:
+    dwarfParticipantsYaml: "config/participants/test-dwarf-participants.yaml"
