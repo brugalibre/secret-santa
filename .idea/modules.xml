@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/secret-santa.main.iml" filepath="$PROJECT_DIR$/.idea/modules/secret-santa.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.secret-santa.secret-santa.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.secret-santa.secret-santa.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/secret-santa.iml" filepath="$PROJECT_DIR$/.idea/secret-santa.iml" />
     </modules>
   </component>
 </project>

@@ -1,0 +1,26 @@
+userYamlEntries:
+  - username: Bice
+    password: 123
+    phoneNr: 0041764005593
+    roles:
+      - USER
+  - username: Tanya
+    password: 321
+    phoneNr: 0041786403983
+    roles:
+      - USER
+  - username: Zine
+    password: 321
+    phoneNr: 0041764533604
+    roles:
+      - USER
+  - username: Selvi
+    password: 321
+    phoneNr: 0041788597076
+    roles:
+      - USER
+  - username: Silwan
+    password: 3210
+    phoneNr: 0041789027830
+    roles:
+      - USER

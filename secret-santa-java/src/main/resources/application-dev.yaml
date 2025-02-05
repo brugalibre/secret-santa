@@ -1,0 +1,39 @@
+application:
+  secretSantaDate: '2024-11-30'
+  notification:
+    daysSendReminderEarlier: 14
+    reminderTime: '06:15:00'
+    notificationConfigFile: config/notification/test-secret-santanotification-config.yaml
+    apiKey: FF803499-4DEB-6109-25F2-46E91693BC1E
+  user:
+    dwarfParticipantsYaml: config/participants/test-dwarf-participants.yaml
+  title: Secret Santa
+  version: 2024.10.26
+logging:
+  file:
+    name: logs/secret-santa.log
+spring:
+  datasource:
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+    url: jdbc:h2:file:./db/application;DB_CLOSE_ON_EXIT=FALSE
+  jpa:
+    properties:
+      javax:
+        persistence:
+          schema-generation:
+            scripts:
+              action: create
+              create-target: init-db.sql
+              create-source: metadata
+    generate-ddl: true
+    database-platform: org.hibernate.dialect.H2Dialect
+    open-in-view: false
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  sql:
+    init:
+      mode: never

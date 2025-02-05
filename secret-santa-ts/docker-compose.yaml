@@ -1,0 +1,21 @@
+services:
+  secret-santa-app:
+    container_name: secret-santa-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: secret-santa:latest
+    ports:
+      - "6300:6300"
+
+  secret-santa-db:
+    container_name: secret-santa-db
+    image: postgres:16.2
+    restart: unless-stopped
+    shm_size: 128mb
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: secret-santa
+      POSTGRES_USER: secret-santa
+      POSTGRES_DB: secret-santa
